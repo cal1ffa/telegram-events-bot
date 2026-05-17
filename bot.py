@@ -101,7 +101,7 @@ def main():
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
     
     print("🤖 Бот запущен!")
-    app.run_polling()
+    app.run_polling(poll_interval=1.0, timeout=30)
 
 if __name__ == "__main__":
     main()
